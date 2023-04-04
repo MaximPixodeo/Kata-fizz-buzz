@@ -47,4 +47,33 @@ class FizzBuzzTest extends TestCase
         $this->assertEquals(1, $fizzBuzz->calculate(1));
     }
 
+    public function testIfNumberIsDividibleBy7ShouldReturnWhizz()
+    {
+        $fizzBuzz = new fizzBuzz;
+
+        $this->assertEquals("Whizz", $fizzBuzz->calculate(7));
+        $this->assertEquals("Whizz", $fizzBuzz->calculate(14));
+    }
+
+    public function testIfNumberIsDividibleBy7And3ShouldReturnFizzWhizz()
+    {
+        $fizzBuzz = new fizzBuzz;
+
+        $this->assertEquals("FizzWhizz", $fizzBuzz->calculate(21));
+    }
+
+    public function testIfNumberIsDividibleBy5And3ShouldReturnBuzzWhizz()
+    {
+        $fizzBuzz = new fizzBuzz;
+
+        $this->assertEquals("BuzzWhizz", $fizzBuzz->calculate(35));
+    }
+
+    public function testIfNumberIsDividibleBy7And5And3ShouldReturnFizzBuzzWhizz()
+    {
+        $fizzBuzz = new fizzBuzz;
+
+        $this->assertEquals("FizzBuzzWhizz", $fizzBuzz->calculate(105));
+    }
+
 }
